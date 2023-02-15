@@ -4,6 +4,7 @@ todays_date = date.today()
 print(f'''작성하고 싶은 파일명을 입력하세요.
 (예: examples.sql -> examples 입력)
 아무것도 입력하지 않으시면 {todays_date}.sql 파일이 생성됩니다.''')
+print('''현재 하이픈(-)과 언더스코어(_)를 처리하지 못하고 있습니다. 공백문자를 입력하시면 언더스코어로 변경되도록 했습니다.''')
 file_name = input('> ').strip()
 
 s = set('\\/*:?"<>|')
@@ -22,6 +23,8 @@ while not is_valid(file_name=file_name):
 
 if file_name == '':
     file_name = str(todays_date)
+else:
+    file_name = file_name.replace(' ', '_')
 
 num_problem_set = int(input('이번 과제는 몇 문제인가요? 정수형으로 입력하세요: '))
 
