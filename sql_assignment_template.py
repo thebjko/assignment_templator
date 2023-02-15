@@ -3,10 +3,8 @@ todays_date = date.today()
 
 print(f'''작성하고 싶은 파일명을 입력하세요.
 (예: examples.sql -> examples 입력)
-(아무것도 입력하지 않으시면 {todays_date}.sql 파일이 생성됩니다.)''')
+아무것도 입력하지 않으시면 {todays_date}.sql 파일이 생성됩니다.''')
 file_name = input('> ').strip()
-if file_name == '':
-    file_name = str(todays_date)
 
 s = set('\\/*:?"<>|')
 
