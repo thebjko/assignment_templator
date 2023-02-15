@@ -28,7 +28,7 @@ else:
 
 num_problem_set = int(input('이번 과제는 몇 문제인가요? 정수형으로 입력하세요: '))
 
-with open(f'{file_name}.sql', 'w+') as f:
+with open(f'{file_name}.sql', 'w+', encoding='utf-8') as f:
     for i in range(1, num_problem_set+1):
         f.write(f'-- 문제 {i}\n\n\n')
 
