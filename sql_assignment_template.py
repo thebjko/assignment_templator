@@ -21,6 +21,11 @@ while not is_valid(file_name=file_name):
     while len(file_name) > 255:
         file_name = input('255자 이내로 입력해주세요: ').strip()
 
+while len(file_name) > 5:
+    file_name = input('5자 이내로 입력해주세요: ').strip()
+    while not is_valid(file_name=file_name):
+        file_name = input('사용할 수 없는 문자를 입력하셨습니다. 다시 입력하세요: ').strip()
+
 if file_name == '':
     file_name = str(todays_date)
 else:
